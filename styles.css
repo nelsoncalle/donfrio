@@ -7,6 +7,7 @@ body {
 .header {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 20px 20px;
     background-color: #f8f8f8;
@@ -44,6 +45,27 @@ body {
     background-color: #0056b3;
 }
 
+
+@media (max-width: 768px) {
+
+    
+    .header {
+        flex-direction: column; /* Cambiar disposición a vertical */
+        align-items: center; /* Centrar los elementos */
+        gap: 15px; /* Espacio entre elementos */
+    }
+
+    .search-bar {
+        width: 100%; /* Barra de búsqueda ocupa todo el ancho */
+        margin: 0; /* Quita márgenes adicionales */
+    }
+
+   
+
+    .search-bar input {
+        width: 80%; /* Ajustar ancho del input */
+    }
+}
 
 
 
