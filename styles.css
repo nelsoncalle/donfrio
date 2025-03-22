@@ -72,31 +72,29 @@ body {
     .search-bar {
         width: 100%; /* Barra de búsqueda ocupa todo el ancho */
         margin: 0; /* Quita márgenes adicionales */
+        display: flex; /* Activa flexbox en el contenedor */
+        align-items: center; /* Alinea los elementos verticalmente */
+        justify-content: center; /* Opcional: centra los elementos horizontalmente */
+        gap: 3.5px; 
     }
 
    
 
     .search-bar input {
         width: 80%; /* Ajustar ancho del input */
+        margin: 0;
     }
 
 
-    button{
+    .search-btn-desktop{
         display: none;
     }
 
-    /* .search-btn {
-        background-color: #007BFF;
-        border: none;
-        color: white;
-        padding: 5px 10px;
-        cursor: pointer;
-        border-radius: 5px;
+    .search-btn{
+        display: block;
     }
-    
-    .search-btn .lupa {
-        font-size: 18px;
-    } */
+
+   
 }
 
 
