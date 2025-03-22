@@ -14,6 +14,7 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
+
 .logo img {
     padding-left: 40px;
     height: 33px;
@@ -45,6 +46,10 @@ body {
     background-color: #0056b3;
 }
 
+.search-btn{
+    display: none;
+}
+
 
 @media (max-width: 768px) {
 
@@ -53,6 +58,15 @@ body {
         flex-direction: column; /* Cambiar disposición a vertical */
         align-items: center; /* Centrar los elementos */
         gap: 15px; /* Espacio entre elementos */
+    }
+    
+    .logo img {
+        padding-left: 0; /* Eliminar el padding */
+        height: auto; /* Ajustar el tamaño si es necesario */
+        width: 120px;
+        display: block; /* Para centrar, aseguramos que sea un elemento block */
+        margin: 0 auto; /* Centra horizontalmente */
+        
     }
 
     .search-bar {
@@ -65,6 +79,24 @@ body {
     .search-bar input {
         width: 80%; /* Ajustar ancho del input */
     }
+
+
+    button{
+        display: none;
+    }
+
+    /* .search-btn {
+        background-color: #007BFF;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .search-btn .lupa {
+        font-size: 18px;
+    } */
 }
 
 
