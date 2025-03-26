@@ -51,6 +51,18 @@ body {
     display: none;
 }
 
+.icon-container {
+    display: flex; /* Activar flexbox */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.icon-container img {
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 5px;
+    object-fit: contain; /* Mantener las proporciones */
+}
 
 
 
