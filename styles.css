@@ -12,6 +12,7 @@ body {
     padding: 20px 20px;
     background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
 }
 
 
@@ -49,6 +50,7 @@ body {
 .search-btn{
     display: none;
 }
+
 
 
 
