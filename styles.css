@@ -58,11 +58,40 @@ body {
 }
 
 .icon-container img {
-    padding-left: 3px;
+    padding-left: 3px; 
     padding-right: 3px;
     padding-top: 5px;
-    object-fit: contain; /* Mantener las proporciones */
+    object-fit: contain; 
 }
+
+.icon {
+    margin-right: 10px;
+    align-items: center; /* Centra los elementos */
+    text-align: center;
+}
+
+.icon p{
+    margin: 0%;
+    font-size: 12px;
+}
+
+
+
+
+.icon:hover img {
+    transform: scale(1.1);
+    filter: brightness(80%); 
+}
+
+
+.icon:hover p {
+    color: red; 
+    text-decoration: underline;
+}
+
+
+
+
 
 
 
