@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -70,12 +71,16 @@ body {
     text-align: center;
 }
 
-.icon p{
-    margin: 0%;
-    font-size: 12px;
+
+p{
+    font-weight: 550;
 }
 
 
+.icon p{
+    margin: 0%;
+    font-size: 11px;
+}
 
 
 .icon:hover img {
@@ -85,7 +90,7 @@ body {
 
 
 .icon:hover p {
-    color: red; 
+    color: rgba(0, 0, 255, 0.596); 
     text-decoration: underline;
 }
 
