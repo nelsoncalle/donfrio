@@ -71,11 +71,10 @@ body {
     text-align: center;
 }
 
-/* .search-icon {
-    width: 30px; /* Ancho fijo */
-    height: 30px; /* Alto fijo */
-} */
 
+#turbina{
+    height: 25px;
+}
 
 p{
     font-weight: 550;
