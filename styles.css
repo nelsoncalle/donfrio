@@ -12,7 +12,7 @@ body {
     gap: 10px;
     padding: 20px 20px;
     background-color: #ffffff;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
     padding-bottom: 5px;
 }
 
@@ -98,50 +98,10 @@ p{
     text-decoration: underline;
 }
 
-
-
-
-.contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    width: 100%; /* Ajusta según el tamaño que necesites */
-}
-
 .icon-container {
-    display: flex;
-    overflow: hidden;
-    width: 90vw;  /*Ajusta según el número de elementos */
-    margin: 0 auto; /* Centra horizontalmente */
-    justify-content: center; 
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px; 
 }
-
-.icon {
-    min-width: 80px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.flecha {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.izquierda {
-    left: 0; /* Ubica la flecha en el extremo izquierdo */
-}
-
-.derecha {
-    right: 0; /* Ubica la flecha en el extremo derecho */
-}
-
 
 
 
@@ -189,12 +149,7 @@ p{
         display: block;
     }
 
-    .icon-container {
-        transform: translateX(0); /* Garantiza que el primer ícono esté al inicio */
-    }
     
-
-   
 }
 
 
