@@ -106,7 +106,23 @@ p{
 
 
 
+
+.icon-container {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+
+
+
+
+
+
+
 @media (max-width: 768px) {
+
+
+    
 
     
     .header {
@@ -149,6 +165,10 @@ p{
         display: block;
     }
 
+    .icon-container{
+        padding-left: 210px;
+       
+    }
     
 }
 
