@@ -1,8 +1,8 @@
 const sql = require('mssql');
 
 const config = {
-    user: 'donfrio',
-    password: 'nelson',
+    // user: 'donfrio',
+    // password: 'nelson',
     server: 'DESKTOP-V1VA7C6', // o el nombre/IP de tu servidor
     database: 'Donfrio',
     options: {
