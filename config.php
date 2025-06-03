@@ -13,7 +13,17 @@ if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
 
-// Consulta simple para obtener productos
-$consulta = "SELECT * FROM productos LIMIT 5"; // Muestra solo 5 productos
+// Consulta modificada para permitir búsqueda
+if(isset($_GET['busqueda'])) {
+    $busqueda = $conexion->real_escape_string($_GET['busqueda']);
+    $consulta = "SELECT * FROM productos WHERE 
+                Nombre LIKE '%$busqueda%' OR 
+                Descripcion LIKE '%$busqueda%' OR 
+                Categoria LIKE '%$busqueda%' OR
+                Marca LIKE '%$busqueda%'";
+} else {
+    $consulta = "SELECT * FROM productos LIMIT 100";
+}
+
 $resultado = $conexion->query($consulta);
 ?>

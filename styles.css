@@ -115,9 +115,66 @@ p{
 
 
 
+/* Añade esto a tu CSS */
+.search-bar form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar input {
+    flex: 1;
+}
+
+.icon {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
 
 
+/* Añade esto al final de tu styles.css existente */
 
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    position: sticky;
+    top: 0;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.img-thumbnail {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+/* Estilo para mensaje de no resultados */
+.no-results {
+    text-align: center;
+    margin: 20px;
+}
 
 @media (max-width: 768px) {
 
@@ -170,6 +227,24 @@ p{
        
     }
     
+    table {
+        font-size: 12px !important; /* Texto más pequeño en móviles */
+    }
+    
+    td, th {
+        padding: 2px !important; /* Reduce el espacio entre celdas */
+    }
+    
+    /* Para los nombres de productos en producto.php */
+    .producto-titulo {
+        font-size: 1.1rem !important;
+    }
+    
+    .producto-descripcion {
+        font-size: 0.5rem !important;
+    }
+
+
 }
 
 
