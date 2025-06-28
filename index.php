@@ -19,7 +19,7 @@
         <header class="header">
             <div class="logo">
                 <a href="index.php">
-                    <img src="images/donfrio.png" alt="Logo de la Tienda">
+                    <img src="images/chiatec.png" alt="Logo de la Tienda">
                 </a>
             </div>
             
@@ -41,43 +41,43 @@
 
             <div class="icon" onclick="buscarPorCategoria('compresor')">
                 <img src="images/iconoBusqueda/compresor.png" alt="compresor" class="search-icon">
-                <p>compresor</p>
+                <p>pagina web</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('motor')">     
                 <img src="images/iconoBusqueda/motor-electrico.png" alt="motor" class="search-icon">
-                <p>motor</p>
+                <p>web app</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('helice')">
                 <img src="images/iconoBusqueda/helice.png" alt="helice" class="search-icon">
-                <p>helice</p>
+                <p>rediseño web </p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('turbina')">  
                 <img id="turbina" src="images/iconoBusqueda/turbinas.png" alt="turbina" class="search-icon">   
-                <p>turbina</p>
+                <p>SEO y velocidad </p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('extractor')">
                 <img src="images/iconoBusqueda/extractor.png" alt="extractor" class="search-icon">
-                <p>extractor</p>
+                <p>migración</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('control')">  
                 <img src="images/iconoBusqueda/control-remoto.png" alt="control-remoto" class="search-icon">
-                <p>control remoto</p>
+                <p>integración de APIs</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('blower')">
                 <img id="blower" src="images/iconoBusqueda/blower.png" alt="blower" class="search-icon">
-                <p>blower</p>
+                <p>software a medida</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('reductor')">  
                 <img src="images/iconoBusqueda/reductor.png" alt="reductor" class="search-icon">
-                <p>reductor</p>    
+                <p>App móviles</p>    
             </div>
             <div class="icon" onclick="buscarPorCategoria('tarjeta')">
                 <img src="images/iconoBusqueda/tarjeta.png" alt="tarjeta" class="search-icon">
-                <p>tarjeta</p>
+                <p>App web</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('serpentin')">  
                 <img src="images/iconoBusqueda/serpentin.png" alt="serpentin" class="search-icon">
-                <p>serpentin</p>
+                <p>chatbots</p>
             </div>
         </div>
 
