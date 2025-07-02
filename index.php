@@ -149,47 +149,44 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while($servicios = $resultado->fetch_assoc()): ?>
+                       
+                    <?php while($servicios = $resultado->fetch_assoc()): ?>
                         <tr>
-                            <td><?= htmlspecialchars($servicios['ID']) ?></td>
-                            <td><?= htmlspecialchars($servicios['Nombre']) ?></td>
-                            <td><?= htmlspecialchars($servicios['Tipo']) ?></td>
-                            <td><?= htmlspecialchars($servicios['Descripcion']) ?></td>
-                            <td>$<?= number_format($servicios['Precio'], 2) ?></td>
-                            <td><?= htmlspecialchars($servicios['Duracion']) ?></td>      
-                            <td><?= htmlspecialchars($servicios['Caracteristicas']) ?></td>                     
+                            <td><?= htmlspecialchars($servicios['id']) ?></td>
+                            <td><?= htmlspecialchars($servicios['nombre']) ?></td>
+                            <td><?= htmlspecialchars($servicios['tipo']) ?></td>
+                            <td><?= htmlspecialchars($servicios['descripcion']) ?></td>
+                            <td>$<?= number_format($servicios['precio'], 2) ?></td>
+                            <td><?= htmlspecialchars($servicios['duracion']) ?></td>      
+                            <td><?= htmlspecialchars($servicios['caracteristicas']) ?></td>                     
                             <td>
-                                <?php if (!empty($servicios['Imagen'])): ?>
-                                    <a href="<?= htmlspecialchars($servicios['Imagen']) ?>" target="_blank">Ver imagen</a>
+                                <?php if (!empty($servicios['imagen'])): ?>
+                                    <a href="<?= htmlspecialchars($servicios['imagen']) ?>" target="_blank">Ver imagen</a>
                                 <?php endif; ?>
                             </td>
-                            <td><?= htmlspecialchars($servicios['Popular']) ?></td>
-                            <td><?= htmlspecialchars($servicios['Tags']) ?></td>
+                            <td><?= htmlspecialchars($servicios['popular']) ?></td>
+                            <td><?= htmlspecialchars($servicios['tags']) ?></td>
                             <td>
-                                    <?php
-                                // Pre-procesa los datos primero
-                                $nombre = addslashes(htmlspecialchars($producto['Nombre'], ENT_QUOTES));
-                                $descripcion = addslashes(htmlspecialchars($producto['Descripcion'], ENT_QUOTES));
-                                $precio = number_format($producto['Precio'], 2, '.', '');
-                                $imagen1 = !empty($producto['Imagen1']) ? addslashes(htmlspecialchars($producto['Imagen1'], ENT_QUOTES)) : '';
-                                $imagen2 = !empty($producto['Imagen2']) ? addslashes(htmlspecialchars($producto['Imagen2'], ENT_QUOTES)) : '';
-                                $video = !empty($producto['Video']) ? addslashes(htmlspecialchars($producto['Video'], ENT_QUOTES)) : '';
-                                $id = $producto['ID'];
+                                <?php
+                                    $nombre = addslashes(htmlspecialchars($servicios['nombre'], ENT_QUOTES));
+                                    $descripcion = addslashes(htmlspecialchars($servicios['descripcion'], ENT_QUOTES));
+                                    $precio = number_format($servicios['precio'], 2, '.', '');
+                                    $imagen = !empty($servicios['imagen']) ? addslashes(htmlspecialchars($servicios['imagen'], ENT_QUOTES)) : '';
+                                    $id = $servicios['id'];
                                 ?>
-
                                 <button class="btn-whatsapp" onclick="compartirProducto(
-                                    '<?= $nombre ?>',
-                                    '<?= $descripcion ?>',
-                                    <?= $precio ?>,
-                                    '<?= $imagen1 ?>',
-                                    '<?= $imagen2 ?>',
-                                    '<?= $video ?>',
-                                    <?= $id ?>
-                                )">
-                                    <i class="fab fa-whatsapp"></i>
-                                </button>
-                            </td>
-                        </tr>
+                                        '<?= $nombre ?>',
+                                        '<?= $descripcion ?>',
+                                        <?= $precio ?>,
+                                        '<?= $imagen ?>',
+                                        '',
+                                        '',
+                                        <?= $id ?>
+                                    )">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </button>
+                                </td>
+                            </tr>
                         <?php endwhile; ?>
                     </tbody>
                 </table>
