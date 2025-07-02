@@ -62,20 +62,20 @@ if(isset($_GET['busqueda'])) {
             
                 <?php while($servicios = $resultado->fetch_assoc()): ?>
                     <tr>
-                        <td><?= $servicios['ID'] ?></td>
-                        <td><?= htmlspecialchars($servicios['Nombre']) ?></td>
-                        <td><?= htmlspecialchars($servicios['Tipo']) ?></td>
-                        <td><?= htmlspecialchars($servicios['Descripcion']) ?></td>
-                        <td>$<?= number_format($servicios['Precio'],2) ?></td>
-                        <td><?= htmlspecialchars($servicios['Duracion']) ?></td>
+                        <td><?= htmlspecialchars($servicios['id']) ?></td>
+                        <td><?= htmlspecialchars($servicios['nombre']) ?></td>
+                        <td><?= htmlspecialchars($servicios['tipo']) ?></td>
+                        <td><?= htmlspecialchars($servicios['descripcion']) ?></td>
+                        <td>$<?= number_format($servicios['drecio'],2) ?></td>
+                        <td><?= htmlspecialchars($servicios['duracion']) ?></td>
                         <td>
-                            <?php if (!empty($servicios['Imagen'])): ?>
-                                <a href="<?= htmlspecialchars($servicios['Imagen']) ?>" target="_blank">Ver imagen</a>
+                            <?php if (!empty($servicios['imagen'])): ?>
+                                <a href="<?= htmlspecialchars($servicios['imagen']) ?>" target="_blank">Ver imagen</a>
                             <?php endif; ?>
                         </td>
                         
-                       <td><?= htmlspecialchars($servicios['Popular']) ?></td>
-                        <td><?= htmlspecialchars($servicios['Tags']) ?></td>
+                       <td><?= htmlspecialchars($servicios['popular']) ?></td>
+                        <td><?= htmlspecialchars($servicios['tags']) ?></td>
                     </tr>
                 <?php endwhile; ?>
                 

@@ -13,7 +13,7 @@ function compartirProducto(nombre, descripcion, precio, imagen1, imagen2, video,
         const precioFormateado = typeof precio === 'number' ? precio.toFixed(2) : parseFloat(precio).toFixed(2);
         
         // Construir la URL del producto correctamente
-        const urlProducto = `${window.location.origin}/donfrio-1/producto.php?id=${idProducto}`;
+        const urlProducto = `${window.location.origin}/chiatec/servicios.php?id=${idProducto}`;
         
         // Construir el mensaje paso a paso
         let mensaje = `${emoji.title} *${nombre}*\n\n`;

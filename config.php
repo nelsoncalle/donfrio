@@ -14,16 +14,19 @@ if ($conexion->connect_error) {
 }
 
 // Consulta modificada para permitir búsqueda
+// Cambia la consulta para que coincida con tu estructura de tabla
 if(isset($_GET['busqueda'])) {
     $busqueda = $conexion->real_escape_string($_GET['busqueda']);
     $consulta = "SELECT * FROM servicios WHERE 
-                Nombre LIKE '%$busqueda%' OR 
-                Descripcion LIKE '%$busqueda%' OR 
-                Categoria LIKE '%$busqueda%' OR
-                Marca LIKE '%$busqueda%'";
+                nombre LIKE '%$busqueda%' OR 
+                tipo LIKE '%$busqueda%' OR 
+                descripcion LIKE '%$busqueda%' OR
+                caracteristicas LIKE '%$busqueda%' OR
+                tags LIKE '%$busqueda%'";
 } else {
     $consulta = "SELECT * FROM servicios LIMIT 100";
 }
+
 
 $resultado = $conexion->query($consulta);
 ?>

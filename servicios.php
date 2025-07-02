@@ -91,33 +91,27 @@ if(!$servicios) {
 </head>
 <body>
     <div class="producto-container">
-        <?php if(!empty($producto['Imagen1'])): ?>
-            <img src="<?=$producto['Imagen1'] ?>" alt="<?= htmlspecialchars($producto['Nombre']) ?>" class="producto-imagen">
-        <?php endif; ?>
-        
-        <h1 class="producto-titulo"><?= htmlspecialchars($producto['Nombre']) ?></h1>
-        
-        <div class="producto-precio">
-            $<?= number_format($producto['Precio'], 2) ?>
-        </div>
-        
-        <div class="producto-descripcion">
-            <?= nl2br(htmlspecialchars($producto['Descripcion'])) ?>
-        </div>
+            <?php if(!empty($servicios['imagen'])): ?>
+             <img src="<?= htmlspecialchars($servicios['imagen']) ?>" alt="<?= htmlspecialchars($servicios['nombre']) ?>" class="producto-imagen">
+            <?php endif; ?>
+
+            <h1 class="producto-titulo"><?= htmlspecialchars($servicios['nombre']) ?></h1>
+
+            <div class="producto-precio">
+                 $<?= number_format($servicios['precio'], 2) ?>
+            </div>
         
        
-        <!-- <button class="whatsapp-btn" 
+        <button class="whatsapp-btn" 
             onclick="compartirProducto(
-            '<?= htmlspecialchars($producto['Nombre'], ENT_QUOTES) ?>',
-            '<?= htmlspecialchars($producto['Descripcion'], ENT_QUOTES) ?>',
-            '<?= number_format($producto['Precio'], 2, '.', '') ?>',
-            '<?= !empty($producto['Imagen1']) ? htmlspecialchars($producto['Imagen1']) : '' ?>',
-            '<?= !empty($producto['Imagen2']) ? htmlspecialchars($producto['Imagen2']) : '' ?>',
-            '<?= !empty($producto['Video']) ? htmlspecialchars($producto['Video']) : '' ?>',
-            '<?= $producto['ID'] ?>'
+            '<?= htmlspecialchars($servicios['nombre'], ENT_QUOTES) ?>',
+            '<?= htmlspecialchars($servicios['descripcion'], ENT_QUOTES) ?>',
+            '<?= number_format($servicios['Precio'], 2, '.', '') ?>',
+            '<?= !empty($servicios['imagen']) ? htmlspecialchars($producto['imagen']) : '' ?>',
+            '<?= $servicios['id'] ?>'
              )">
              <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-        </button> -->
+        </button>
 
 
 
