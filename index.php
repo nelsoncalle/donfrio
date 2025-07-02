@@ -39,11 +39,11 @@
         
         <div class="icon-container">
 
-            <div class="icon" onclick="buscarPorCategoria('compresor')">
-                <img src="images/iconoBusqueda/compresor.png" alt="compresor" class="search-icon">
+            <div class="icon" onclick="buscarPorCategoria('pagina web')">
+                <img src="images/iconoBusqueda/compresor.png" alt="pagina web" class="search-icon">
                 <p>pagina web</p>
             </div>
-            <div class="icon" onclick="buscarPorCategoria('motor')">     
+            <!-- <div class="icon" onclick="buscarPorCategoria('motor')">     
                 <img src="images/iconoBusqueda/motor-electrico.png" alt="motor" class="search-icon">
                 <p>web app</p>
             </div>
@@ -78,7 +78,7 @@
             <div class="icon" onclick="buscarPorCategoria('serpentin')">  
                 <img src="images/iconoBusqueda/serpentin.png" alt="serpentin" class="search-icon">
                 <p>chatbots</p>
-            </div>
+            </div> -->
         </div>
 
 

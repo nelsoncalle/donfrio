@@ -19,7 +19,7 @@ if(isset($_GET['busqueda'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chiatec - Resultados</title>
-    <link rel="icon" href="images/DF.png" type="image/x-icon">
+    <link rel="icon" href="images/chia.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
