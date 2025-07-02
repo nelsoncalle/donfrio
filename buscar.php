@@ -4,11 +4,11 @@ require 'config.php';
 // Procesar búsqueda
 if(isset($_GET['busqueda'])) {
     $busqueda = $conexion->real_escape_string($_GET['busqueda']);
-    $consulta = "SELECT * FROM productos WHERE 
-                Nombre LIKE '%$busqueda%' OR 
-                Descripcion LIKE '%$busqueda%' OR 
-                Categoria LIKE '%$busqueda%' OR
-                Marca LIKE '%$busqueda%'";
+    $consulta = "SELECT * FROM servicios WHERE 
+                nombre LIKE '%$busqueda%' OR 
+                tipo LIKE '%$busqueda%' OR 
+                descripcion LIKE '%$busqueda%' OR
+                caracteristicas LIKE '%$busqueda%'";
     $resultado = $conexion->query($consulta);
 }
 ?>
@@ -18,7 +18,7 @@ if(isset($_GET['busqueda'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DONFRIO - Resultados</title>
+    <title>Chiatec - Resultados</title>
     <link rel="icon" href="images/DF.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -47,44 +47,43 @@ if(isset($_GET['busqueda'])) {
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
+                    <th>Tipo</th>
                     <th>Descripción</th>
                     <th>Precio</th>
-                    <th>Stock</th>
-                    <th>Categoría</th>
-                    <th>Imagen 1</th>
-                    <th>Imagen 2</th>
-                    <th>Video</th>
-                    <th>Marca</th>
-                    <th>Marca AC</th>
-                    <th>Fecha Creación</th>
+                    <th>Duración</th>
+                    <th>Caracteristicas</th>
+                    <th>Imagen</th>
+                    <th>Popular</th>
+                    <th>Tags</th>
+                    <th>Disponible</th>
                 </tr>
             </thead>
             <tbody>
             
-                <?php while($producto = $resultado->fetch_assoc()): ?>
+                <?php while($servicios = $resultado->fetch_assoc()): ?>
                     <tr>
-                        <td><?= $producto['ID'] ?></td>
-                        <td><?= htmlspecialchars($producto['Nombre']) ?></td>
-                        <td><?= htmlspecialchars($producto['Descripcion']) ?></td>
-                        <td>$<?= number_format($producto['Precio'], 2) ?></td>
-                        <td><?= number_format($producto['Stock']) ?></td>
-                        <td><?= htmlspecialchars($producto['Categoria']) ?></td>
+                        <td><?= $servicios['ID'] ?></td>
+                        <td><?= htmlspecialchars($servicios['Nombre']) ?></td>
+                        <td><?= htmlspecialchars($servicios['Descripcion']) ?></td>
+                        <td>$<?= number_format($servicios['Precio'], 2) ?></td>
+                        <td><?= number_format($servicios['Stock']) ?></td>
+                        <td><?= htmlspecialchars($servicios['Categoria']) ?></td>
                         <td>
-                            <?php if (!empty($producto['Imagen1'])): ?>
-                                <a href="<?= htmlspecialchars($producto['Imagen1']) ?>" target="_blank">Ver imagen</a>
+                            <?php if (!empty($servicios['Imagen1'])): ?>
+                                <a href="<?= htmlspecialchars($servicios['Imagen1']) ?>" target="_blank">Ver imagen</a>
                             <?php endif; ?>
                         </td>
                         <td>
-                            <?php if (!empty($producto['Imagen2'])): ?>
-                                <a href="<?= htmlspecialchars($producto['Imagen2']) ?>" target="_blank">Ver imagen</a>
+                            <?php if (!empty($servicios['Imagen2'])): ?>
+                                <a href="<?= htmlspecialchars($servicios['Imagen2']) ?>" target="_blank">Ver imagen</a>
                             <?php endif; ?>
                         </td>
                         <td>
-                            <?php if (!empty($producto['Video'])): ?>
-                                <a href="<?= htmlspecialchars($producto['Video']) ?>" target="_blank">Ver video</a>
+                            <?php if (!empty($servicios['Video'])): ?>
+                                <a href="<?= htmlspecialchars($servicios['Video']) ?>" target="_blank">Ver video</a>
                             <?php endif; ?>
                         </td>
-                        <td><?= htmlspecialchars($producto['Marca']) ?></td>
+                        <td><?= htmlspecialchars($servicios['Marca']) ?></td>
                     </tr>
                 <?php endwhile; ?>
                 
