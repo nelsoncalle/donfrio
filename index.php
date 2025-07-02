@@ -88,7 +88,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Catálogo de Productos Donfrio</title>
+        <title>Catálogo de Servicios Chiatec</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -137,46 +137,34 @@
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
+                            <th>Tipo</th>
                             <th>Descripción</th>
                             <th>Precio</th>
-                            <th>Stock</th>
-                            <th>Categoría</th>
-                            <th>Imagen 1</th>
-                            <th>Imagen 2</th>
-                            <th>Video</th>
-                            <th>Marca</th>
-                            <th>Marca AC</th>
-                            <th>Fecha Creación</th>
-                            <th>Compartir</th>
+                            <th>Duración</th>
+                            <th>Caracteristicas</th>
+                            <th>Imagen</th>
+                            <th>Popular</th>
+                            <th>Tags</th>
+                            <th>Disponible</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php while($producto = $resultado->fetch_assoc()): ?>
+                        <?php while($servicios = $resultado->fetch_assoc()): ?>
                         <tr>
-                            <td><?= htmlspecialchars($producto['ID']) ?></td>
-                            <td><?= htmlspecialchars($producto['Nombre']) ?></td>
-                            <td><?= htmlspecialchars($producto['Descripcion']) ?></td>
-                            <td>$<?= number_format($producto['Precio'], 2) ?></td>
-                            <td><?= $producto['Stock'] ?></td>
-                            <td><?= htmlspecialchars($producto['Categoria']) ?></td>
+                            <td><?= htmlspecialchars($servicios['ID']) ?></td>
+                            <td><?= htmlspecialchars($servicios['Nombre']) ?></td>
+                            <td><?= htmlspecialchars($servicios['Tipo']) ?></td>
+                            <td><?= htmlspecialchars($servicios['Descripcion']) ?></td>
+                            <td>$<?= number_format($servicios['Precio'], 2) ?></td>
+                            <td><?= htmlspecialchars($servicios['Duracion']) ?></td>      
+                            <td><?= htmlspecialchars($servicios['Caracteristicas']) ?></td>                     
                             <td>
-                                <?php if (!empty($producto['Imagen1'])): ?>
-                                    <a href="<?= htmlspecialchars($producto['Imagen1']) ?>" target="_blank">Ver imagen</a>
+                                <?php if (!empty($servicios['Imagen'])): ?>
+                                    <a href="<?= htmlspecialchars($servicios['Imagen']) ?>" target="_blank">Ver imagen</a>
                                 <?php endif; ?>
                             </td>
-                            <td>
-                                <?php if (!empty($producto['Imagen2'])): ?>
-                                    <a href="<?= htmlspecialchars($producto['Imagen2']) ?>" target="_blank">Ver imagen</a>
-                                <?php endif; ?>
-                            </td>
-                            <td>
-                                <?php if (!empty($producto['Video'])): ?>
-                                    <a href="<?= htmlspecialchars($producto['Video']) ?>" target="_blank">Ver video</a>
-                                <?php endif; ?>
-                            </td>
-                            <td><?= htmlspecialchars($producto['Marca']) ?></td>
-                            <td><?= htmlspecialchars($producto['MarcaAC']) ?></td>
-                            <td><?= $producto['FechaCreacion'] ?></td>
+                            <td><?= htmlspecialchars($servicios['Popular']) ?></td>
+                            <td><?= htmlspecialchars($servicios['Tags']) ?></td>
                             <td>
                                     <?php
                                 // Pre-procesa los datos primero

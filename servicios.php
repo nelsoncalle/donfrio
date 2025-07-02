@@ -20,9 +20,9 @@ $query = "SELECT * FROM servicios WHERE ID = ?";
 $stmt = $conexion->prepare($query);
 $stmt->bind_param("i", $id);
 $stmt->execute();
-$producto = $stmt->get_result()->fetch_assoc();
+$servicios = $stmt->get_result()->fetch_assoc();
 
-if(!$producto) {
+if(!$servicios) {
     die("Producto no encontrado");
 }
 ?>
@@ -106,7 +106,7 @@ if(!$producto) {
         </div>
         
        
-        <button class="whatsapp-btn" 
+        <!-- <button class="whatsapp-btn" 
             onclick="compartirProducto(
             '<?= htmlspecialchars($producto['Nombre'], ENT_QUOTES) ?>',
             '<?= htmlspecialchars($producto['Descripcion'], ENT_QUOTES) ?>',
@@ -117,7 +117,7 @@ if(!$producto) {
             '<?= $producto['ID'] ?>'
              )">
              <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-        </button>
+        </button> -->
 
 
 

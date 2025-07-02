@@ -64,26 +64,18 @@ if(isset($_GET['busqueda'])) {
                     <tr>
                         <td><?= $servicios['ID'] ?></td>
                         <td><?= htmlspecialchars($servicios['Nombre']) ?></td>
+                        <td><?= htmlspecialchars($servicios['Tipo']) ?></td>
                         <td><?= htmlspecialchars($servicios['Descripcion']) ?></td>
-                        <td>$<?= number_format($servicios['Precio'], 2) ?></td>
-                        <td><?= number_format($servicios['Stock']) ?></td>
-                        <td><?= htmlspecialchars($servicios['Categoria']) ?></td>
+                        <td>$<?= number_format($servicios['Precio'],2) ?></td>
+                        <td><?= htmlspecialchars($servicios['Duracion']) ?></td>
                         <td>
-                            <?php if (!empty($servicios['Imagen1'])): ?>
-                                <a href="<?= htmlspecialchars($servicios['Imagen1']) ?>" target="_blank">Ver imagen</a>
+                            <?php if (!empty($servicios['Imagen'])): ?>
+                                <a href="<?= htmlspecialchars($servicios['Imagen']) ?>" target="_blank">Ver imagen</a>
                             <?php endif; ?>
                         </td>
-                        <td>
-                            <?php if (!empty($servicios['Imagen2'])): ?>
-                                <a href="<?= htmlspecialchars($servicios['Imagen2']) ?>" target="_blank">Ver imagen</a>
-                            <?php endif; ?>
-                        </td>
-                        <td>
-                            <?php if (!empty($servicios['Video'])): ?>
-                                <a href="<?= htmlspecialchars($servicios['Video']) ?>" target="_blank">Ver video</a>
-                            <?php endif; ?>
-                        </td>
-                        <td><?= htmlspecialchars($servicios['Marca']) ?></td>
+                        
+                       <td><?= htmlspecialchars($servicios['Popular']) ?></td>
+                        <td><?= htmlspecialchars($servicios['Tags']) ?></td>
                     </tr>
                 <?php endwhile; ?>
                 
