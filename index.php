@@ -142,7 +142,7 @@
                             <th>Precio</th>
                             <th>Duración</th>
                             <th>Caracteristicas</th>
-                            <th>Imagen</th>
+                            <th>Nuestros trabajos</th>
                             <th>Popular</th>
                             <th>Tags</th>
                             <th>Disponible</th>
@@ -156,22 +156,18 @@
                             <td><?= htmlspecialchars($servicios['nombre']) ?></td>
                             <td><?= htmlspecialchars($servicios['tipo']) ?></td>
                             <td><?= htmlspecialchars($servicios['descripcion']) ?></td>
-                            <td>$<?= number_format($servicios['precio'], 2) ?></td>
+                            <td><?= htmlspecialchars($servicios['precio']) ?></td>
                             <td><?= htmlspecialchars($servicios['duracion']) ?></td>      
                             <td><?= htmlspecialchars($servicios['caracteristicas']) ?></td>                     
-                            <td>
-                                <?php if (!empty($servicios['imagen'])): ?>
-                                    <a href="<?= htmlspecialchars($servicios['imagen']) ?>" target="_blank">Ver imagen</a>
-                                <?php endif; ?>
-                            </td>
+                            <td><?= htmlspecialchars($servicios['nuestros trabajos']) ?></td>
                             <td><?= htmlspecialchars($servicios['popular']) ?></td>
                             <td><?= htmlspecialchars($servicios['tags']) ?></td>
                             <td>
                                 <?php
                                     $nombre = addslashes(htmlspecialchars($servicios['nombre'], ENT_QUOTES));
                                     $descripcion = addslashes(htmlspecialchars($servicios['descripcion'], ENT_QUOTES));
-                                    $precio = number_format($servicios['precio'], 2, '.', '');
-                                    $imagen = !empty($servicios['imagen']) ? addslashes(htmlspecialchars($servicios['imagen'], ENT_QUOTES)) : '';
+                                    $precio = addslashes(htmlspecialchars($servicios['precio'], ENT_QUOTES));
+                                    $imagen = !empty($servicios['nuestros trabajos']) ? addslashes(htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES)) : '';
                                     $id = $servicios['id'];
                                 ?>
                                 <button class="btn-whatsapp" onclick="compartirProducto(
