@@ -132,61 +132,63 @@
         
         <?php if ($resultado->num_rows > 0): ?>
             <div style="overflow-x:auto;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Tipo</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Duración</th>
-                            <th>Caracteristicas</th>
-                            <th>Nuestros trabajos</th>
-                            <th>Popular</th>
-                            <th>Tags</th>
-                            <th>Disponible</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                       
-                    <?php while($servicios = $resultado->fetch_assoc()): ?>
-                        <tr>
-                            <td><?= htmlspecialchars($servicios['id']) ?></td>
-                            <td><?= htmlspecialchars($servicios['nombre']) ?></td>
-                            <td><?= htmlspecialchars($servicios['tipo']) ?></td>
-                            <td><?= htmlspecialchars($servicios['descripcion']) ?></td>
-                            <td><?= htmlspecialchars($servicios['precio']) ?></td>
-                            <td><?= htmlspecialchars($servicios['duracion']) ?></td>      
-                            <td><?= htmlspecialchars($servicios['caracteristicas']) ?></td>                     
-                            <td><?= htmlspecialchars($servicios['nuestros trabajos']) ?></td>
-                            <td><?= htmlspecialchars($servicios['popular']) ?></td>
-                            <td><?= htmlspecialchars($servicios['tags']) ?></td>
-                            <td>
-                                <?php
-                                    $nombre = addslashes(htmlspecialchars($servicios['nombre'], ENT_QUOTES));
-                                    $descripcion = addslashes(htmlspecialchars($servicios['descripcion'], ENT_QUOTES));
-                                    $precio = addslashes(htmlspecialchars($servicios['precio'], ENT_QUOTES));
-                                    $imagen = !empty($servicios['nuestros trabajos']) ? addslashes(htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES)) : '';
-                                    $id = $servicios['id'];
-                                ?>
-                                <button class="btn-whatsapp" onclick="compartirProducto(
-                                        '<?= $nombre ?>',
-                                        '<?= $descripcion ?>',
-                                        <?= $precio ?>,
-                                        '<?= $imagen ?>',
-                                        '',
-                                        '',
-                                        <?= $id ?>
-                                    )">
-                                        <i class="fab fa-whatsapp"></i>
-                                    </button>
-                                </td>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Tipo</th>
+                                <th>Descripción</th>
+                                <th>Precio</th>
+                                <th>Duración</th>
+                                <th>Caracteristicas</th>
+                                <th>Nuestros trabajos</th>
+                                <th>Popular</th>
+                                <th>Tags</th>
+                                <th>Disponible</th>
                             </tr>
-                        <?php endwhile; ?>
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                        
+                        <?php while($servicios = $resultado->fetch_assoc()): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($servicios['id']) ?></td>
+                                <td><?= htmlspecialchars($servicios['nombre']) ?></td>
+                                <td><?= htmlspecialchars($servicios['tipo']) ?></td>
+                                <td><?= htmlspecialchars($servicios['descripcion']) ?></td>
+                                <td><?= htmlspecialchars($servicios['precio']) ?></td>
+                                <td><?= htmlspecialchars($servicios['duracion']) ?></td>      
+                                <td><?= htmlspecialchars($servicios['caracteristicas']) ?></td>                     
+                                <td><?= htmlspecialchars($servicios['nuestros trabajos']) ?></td>
+                                <td><?= htmlspecialchars($servicios['popular']) ?></td>
+                                <td><?= htmlspecialchars($servicios['tags']) ?></td>
+                                <td>
+                                    <?php
+                                        $nombre = addslashes(htmlspecialchars($servicios['nombre'], ENT_QUOTES));
+                                        $descripcion = addslashes(htmlspecialchars($servicios['descripcion'], ENT_QUOTES));
+                                        $precio = addslashes(htmlspecialchars($servicios['precio'], ENT_QUOTES));
+                                        $imagen = !empty($servicios['nuestros trabajos']) ? addslashes(htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES)) : '';
+                                        $id = $servicios['id'];
+                                    ?>
+                                    <button class="btn-whatsapp" onclick="compartirProducto(
+                                            '<?= $nombre ?>',
+                                            '<?= $descripcion ?>',
+                                            <?= $precio ?>,
+                                            '<?= $imagen ?>',
+                                            '',
+                                            '',
+                                            <?= $id ?>
+                                        )">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </?div>
         <?php else: ?>
             <p>No se encontraron productos en la base de datos.</p>
         <?php endif; ?>

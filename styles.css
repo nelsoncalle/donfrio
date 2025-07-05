@@ -136,6 +136,20 @@ p{
 }
 
 
+
+/* Contenedor principal de la tabla */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Suaviza el scroll en móviles */
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+
+
+
 /* Añade esto al final de tu styles.css existente */
 
 /* Estilos para tablas */
