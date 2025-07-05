@@ -156,7 +156,9 @@ p{
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: fixed;
     margin-top: 20px;
+    font-size: 0.8em;
 }
 
 th, td {
