@@ -1,12 +1,10 @@
-function compartirProducto(nombre, descripcion, precio, imagen1, imagen2, video, idProducto) {
+function compartirProducto(nombre, descripcion, precio) {
     try {
         const emoji = {
             title: '📌',
             description: '📝',
             price: '💲',
-            image: '🖼️',
-            video: '🎥',
-            link: '🔗'
+            
         };
         
         // Asegurar que el precio tenga 2 decimales
