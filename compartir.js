@@ -1,9 +1,11 @@
-function compartirProducto(nombre, descripcion, precio) {
+function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestrostrbajos) {
     try {
         const emoji = {
             title: '📌',
             description: '📝',
             price: '💲',
+            caracteristicas: ,
+            nuestrostrbajos: ,
             
         };
         
@@ -11,18 +13,16 @@ function compartirProducto(nombre, descripcion, precio) {
         const precioFormateado = typeof precio === 'number' ? precio.toFixed(2) : parseFloat(precio).toFixed(2);
         
         // Construir la URL del producto correctamente
-        const urlProducto = `${window.location.origin}/chiatec/servicios.php?id=${idProducto}`;
+        //const urlProducto = `${window.location.origin}/chiatec/servicios.php?id=${idProducto}`;
         
         // Construir el mensaje paso a paso
         let mensaje = `${emoji.title} *${nombre}*\n\n`;
         mensaje += `${emoji.description} *Descripción:* ${descripcion}\n\n`;
         mensaje += `${emoji.price} *Precio:* $${precioFormateado}\n\n`;
+        mensaje += `${emoji.price} *Caracteristicas:* ${caracteristicas}\n\n`;
+        mensaje += `${emoji.price} *Nuestros Trabajos:* ${nuestrostrbajos}\n\n`;
         
-        if (imagen1) mensaje += `${emoji.image} *Imagen 1:* ${imagen1}\n`;
-        if (imagen2) mensaje += `${emoji.image} *Imagen 2:* ${imagen2}\n`;
-        if (video) mensaje += `${emoji.video} *Video:* ${video}\n\n`;
         
-        mensaje += `${emoji.link} *Ver producto:* ${urlProducto}`;
         
         // Codificar para URL
         const mensajeCodificado = encodeURIComponent(mensaje);
