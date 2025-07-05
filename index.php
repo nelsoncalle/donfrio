@@ -132,7 +132,7 @@
         
         <?php if ($resultado->num_rows > 0): ?>
             <div style="overflow-x:auto;">
-                <div class="table-container">
+                
                     <table>
                         <thead>
                             <tr>

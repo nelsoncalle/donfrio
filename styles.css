@@ -152,53 +152,6 @@ p{
 
 
 
-/* Añade esto al final de tu styles.css existente */
-
-/* Estilos para tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    margin-top: 20px;
-    font-size: 0.3em;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-    position: sticky;
-    top: 0;
-}
-
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tr:hover {
-    background-color: #f1f1f1;
-}
-
-.img-thumbnail {
-    max-width: 100px;
-    max-height: 100px;
-}
-
-/* Estilo para mensaje de no resultados */
-.no-results {
-    text-align: center;
-    margin: 20px;
-}
-
-
-th:nth-child(1), td:nth-child(1) { width: 5%; } /* ID */
-th:nth-child(2), td:nth-child(2) { width: 12%; } /* Nombre */
-th:nth-child(3), td:nth-child(3) { width: 10%; } /* Tipo */
-
 @media (max-width: 768px) {
 
 
