@@ -168,20 +168,19 @@
                                         $nombre = addslashes(htmlspecialchars($servicios['nombre'], ENT_QUOTES));
                                         $descripcion = addslashes(htmlspecialchars($servicios['descripcion'], ENT_QUOTES));
                                         $precio = addslashes(htmlspecialchars($servicios['precio'], ENT_QUOTES));
-                                        $nombre = addslashes(htmlspecialchars($servicios['caracteristicas'], ENT_QUOTES));
-                                        $nombre = addslashes(htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES));
-                                        
+                                        $caracteristcas = addslashes(htmlspecialchars($servicios['caracteristicas'], ENT_QUOTES));
+                                        $nuestrostrabajos = addslashes(htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES));
                                     ?>
                                     <button class="btn-whatsapp" onclick="compartirProducto(
                                             '<?= $nombre ?>',
                                             '<?= $descripcion ?>',
                                             <?= $precio ?>,
                                             '<?= $caracteristcas ?>',
-                                            <?= $nuestrostrabajos ?>
+                                            '<?= $nuestrostrabajos ?>'
                                         )">
                                             <i class="fab fa-whatsapp"></i>
-                                        </button>
-                                    </td>
+                                    </button>
+                                </td>
                                 </tr>
                             <?php endwhile; ?>
                         </tbody>
