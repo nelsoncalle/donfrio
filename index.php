@@ -41,17 +41,17 @@
 
             <div class="icon" onclick="buscarPorCategoria('pagina web')">
                 <img src="images/iconoBusqueda/compresor.png" alt="pagina web" class="search-icon">
-                <p>pagina web</p>
+                <p>desarrollo web</p>
             </div>
-            <!-- <div class="icon" onclick="buscarPorCategoria('motor')">     
+            <div class="icon" onclick="buscarPorCategoria('motor')">     
                 <img src="images/iconoBusqueda/motor-electrico.png" alt="motor" class="search-icon">
-                <p>web app</p>
+                <p>desarrollo movil</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('helice')">
                 <img src="images/iconoBusqueda/helice.png" alt="helice" class="search-icon">
-                <p>rediseño web </p>
+                <p>soporte</p>
             </div>
-            <div class="icon" onclick="buscarPorCategoria('turbina')">  
+            <!-- <div class="icon" onclick="buscarPorCategoria('turbina')">  
                 <img id="turbina" src="images/iconoBusqueda/turbinas.png" alt="turbina" class="search-icon">   
                 <p>SEO y velocidad </p>
             </div>
@@ -159,8 +159,29 @@
                                 <td><?= htmlspecialchars($servicios['descripcion']) ?></td>
                                 <td><?= htmlspecialchars($servicios['precio']) ?></td>
                                 <td><?= htmlspecialchars($servicios['duracion']) ?></td>      
-                                <td><?= htmlspecialchars($servicios['caracteristicas']) ?></td>                     
-                                <td><?= htmlspecialchars($servicios['nuestros trabajos']) ?></td>
+                                <td><?= htmlspecialchars($servicios['caracteristicas']) ?></td> 
+                                <td>
+                                    <?php 
+                                    if (!empty($servicios['nuestros trabajos'])) {
+                                        // Separar las URLs por "|" (o el delimitador que uses)
+                                        $urls = explode('|', $servicios['nuestros trabajos']);
+                                        
+                                        foreach ($urls as $i => $url) {
+                                            $url = trim($url);
+                                            if (!empty($url)) {
+                                                // Determinar si es video (MP4/WebM) o enlace web
+                                                $is_video = preg_match('/\.(mp4|webm)$/i', $url);
+                                                $texto = $is_video ? '🎬 Ver video ' . ($i + 1) : '🌐 Ver proyecto ' . ($i + 1);
+                                                
+                                                // Abrir en nueva pestaña directamente
+                                                echo '<a href="' . htmlspecialchars($url) . '" target="_blank" class="enlace-simple">';
+                                                echo $texto;
+                                                echo '</a><br>';
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                </td>
                                 <td><?= htmlspecialchars($servicios['popular']) ?></td>
                                 <td><?= htmlspecialchars($servicios['tags']) ?></td>
                                 <td>
