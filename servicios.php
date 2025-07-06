@@ -107,7 +107,8 @@ if(!$servicios) {
             '<?= htmlspecialchars($servicios['nombre'], ENT_QUOTES) ?>',
             '<?= htmlspecialchars($servicios['descripcion'], ENT_QUOTES) ?>',
             '<?= number_format($servicios['Precio'], 2, '.', '') ?>',
-            '<?= !empty($servicios['imagen']) ? htmlspecialchars($producto['imagen']) : '' ?>',
+            '<?= htmlspecialchars($servicios['caracteristicas'], ENT_QUOTES) ?>',
+            '<?= htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES) ?>',
             '<?= $servicios['id'] ?>'
              )">
              <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
