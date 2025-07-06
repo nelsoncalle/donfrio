@@ -1,4 +1,4 @@
-function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestrostrbajos) {
+function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestrostrabajos) {
     try {
         const emoji = {
             title: '📌',
