@@ -12,3 +12,12 @@ function buscarPorCategoria(categoria) {
     document.getElementById('search').value = categoria;
     document.getElementById('searchForm').submit();
 }
+
+
+// Agrega esto al final de tu página (antes de </body>)
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Previene el bloqueo
+        window.open(this.href, '_blank');
+    });
+});
