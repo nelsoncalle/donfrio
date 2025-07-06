@@ -4,8 +4,8 @@ function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestro
             title: '📌',
             description: '📝',
             price: '💲',
-            caracteristicas: 🚀,
-            nuestrostrbajos: 🌐,
+            caracteristicas: '🚀',
+            nuestrostrbajos: '🌐',
             
         };
         
@@ -19,8 +19,8 @@ function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestro
         let mensaje = `${emoji.title} *${nombre}*\n\n`;
         mensaje += `${emoji.description} *Descripción:* ${descripcion}\n\n`;
         mensaje += `${emoji.price} *Precio:* $${precioFormateado}\n\n`;
-        mensaje += `${emoji.price} *Caracteristicas:* ${caracteristicas}\n\n`;
-        mensaje += `${emoji.price} *Nuestros Trabajos:* ${nuestrostrbajos}\n\n`;
+        mensaje += `${emoji.caracteristicas} *Caracteristicas:* ${caracteristicas}\n\n`;
+        mensaje += `${emoji.nuestrostrabajos} *Nuestros Trabajos:* ${nuestrostrbajos}\n\n`;
         
         
         
