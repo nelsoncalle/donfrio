@@ -1,38 +1,39 @@
 function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestrosTrabajos) {
     try {
+        // Verificar parámetros
+        console.log('Parámetros recibidos:', {nombre, descripcion, precio, caracteristicas, nuestrosTrabajos});
+        
         const emoji = {
             title: '📌',
             description: '📝',
             price: '💲',
-            caracteristicas: '🚀',
-            nuestrosTrabajos: '🌐',
-            
+            features: '🚀',
+            works: '🌐'
         };
         
-        // Asegurar que el precio tenga 2 decimales
-        const precioFormateado = typeof precio === 'number' ? precio.toFixed(2) : parseFloat(precio).toFixed(2);
+        // Formatear precio
+        let precioFormateado = precio;
+        if (typeof precio === 'string') {
+            precioFormateado = parseFloat(precio.replace(/[^\d.]/g, '')).toFixed(2);
+        } else if (typeof precio === 'number') {
+            precioFormateado = precio.toFixed(2);
+        }
         
-        // Construir la URL del producto correctamente
-        //const urlProducto = `${window.location.origin}/chiatec/servicios.php?id=${idProducto}`;
+        // Construir mensaje
+        let mensaje = [
+            `${emoji.title} *${nombre.trim()}*`,
+            `${emoji.description} *Descripción:* ${descripcion.trim()}`,
+            `${emoji.price} *Precio:* $${precioFormateado}`,
+            `${emoji.features} *Características:* ${caracteristicas.trim()}`,
+            `${emoji.works} *Nuestros Trabajos:* ${nuestrosTrabajos.trim()}`
+        ].join('\n\n');
         
-        // Construir el mensaje paso a paso
-        let mensaje = `${emoji.title} *${nombre}*\n\n`;
-        mensaje += `${emoji.description} *Descripción:* ${descripcion}\n\n`;
-        mensaje += `${emoji.price} *Precio:* $${precioFormateado}\n\n`;
-        mensaje += `${emoji.caracteristicas} *Caracteristicas:* ${caracteristicas}\n\n`;
-        mensaje += `${emoji.nuestrosTrabajos} *Nuestros Trabajos:* ${nuestrosTrabajos}\n\n`;
-        
-        
-        
-        // Codificar para URL
+        // Codificar y abrir WhatsApp
         const mensajeCodificado = encodeURIComponent(mensaje);
-        const whatsappUrl = `https://api.whatsapp.com/send?text=${mensajeCodificado}`;
-        
-        // Abrir en nueva pestaña
-        window.open(whatsappUrl, '_blank');
+        window.open(`https://wa.me/?text=${mensajeCodificado}`, '_blank');
         
     } catch (error) {
         console.error('Error al compartir:', error);
-        alert('Error al compartir. Por favor intente manualmente.');
+        alert('Error al compartir: ' + error.message);
     }
 }

@@ -108,8 +108,7 @@ if(!$servicios) {
             '<?= htmlspecialchars($servicios['descripcion'], ENT_QUOTES) ?>',
             '<?= number_format($servicios['Precio'], 2, '.', '') ?>',
             '<?= htmlspecialchars($servicios['caracteristicas'], ENT_QUOTES) ?>',
-            '<?= htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES) ?>',
-            '<?= $servicios['id'] ?>'
+            '<?= htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES) ?>'
              )">
              <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
         </button>
