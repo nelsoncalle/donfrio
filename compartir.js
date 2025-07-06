@@ -4,8 +4,8 @@ function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestro
             title: '📌',
             description: '📝',
             price: '💲',
-            caracteristicas: ,
-            nuestrostrbajos: ,
+            caracteristicas: 🚀,
+            nuestrostrbajos: 🌐,
             
         };
         

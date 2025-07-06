@@ -146,7 +146,7 @@
                                 <th>Nuestros trabajos</th>
                                 <th>Popular</th>
                                 <th>Tags</th>
-                                <th>Disponible</th>
+                                <th>Compartir</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -168,8 +168,7 @@
                                         $nombre = addslashes(htmlspecialchars($servicios['nombre'], ENT_QUOTES));
                                         $descripcion = addslashes(htmlspecialchars($servicios['descripcion'], ENT_QUOTES));
                                         $precio = addslashes(htmlspecialchars($servicios['precio'], ENT_QUOTES));
-                                        $imagen = !empty($servicios['nuestros trabajos']) ? addslashes(htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES)) : '';
-                                        $id = $servicios['id'];
+                                        
                                     ?>
                                     <button class="btn-whatsapp" onclick="compartirProducto(
                                             '<?= $nombre ?>',
