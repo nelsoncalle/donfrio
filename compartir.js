@@ -1,11 +1,11 @@
-function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestrostrabajos) {
+function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestrosTrabajos) {
     try {
         const emoji = {
             title: '📌',
             description: '📝',
             price: '💲',
             caracteristicas: '🚀',
-            nuestrostrbajos: '🌐',
+            nuestrosTrabajos: '🌐',
             
         };
         
@@ -20,7 +20,7 @@ function compartirProducto(nombre, descripcion, precio, caracteristicas, nuestro
         mensaje += `${emoji.description} *Descripción:* ${descripcion}\n\n`;
         mensaje += `${emoji.price} *Precio:* $${precioFormateado}\n\n`;
         mensaje += `${emoji.caracteristicas} *Caracteristicas:* ${caracteristicas}\n\n`;
-        mensaje += `${emoji.nuestrostrabajos} *Nuestros Trabajos:* ${nuestrostrbajos}\n\n`;
+        mensaje += `${emoji.nuestrosTrabajos} *Nuestros Trabajos:* ${nuestrosTrabajos}\n\n`;
         
         
         

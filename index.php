@@ -169,7 +169,7 @@
                                         $descripcion = addslashes(htmlspecialchars($servicios['descripcion'], ENT_QUOTES));
                                         $precio = addslashes(htmlspecialchars($servicios['precio'], ENT_QUOTES));
                                         $nombre = addslashes(htmlspecialchars($servicios['caracteristicas'], ENT_QUOTES));
-                                        $nombre = addslashes(htmlspecialchars($servicios['nuestrostrabajos'], ENT_QUOTES));
+                                        $nombre = addslashes(htmlspecialchars($servicios['nuestros trabajos'], ENT_QUOTES));
                                         
                                     ?>
                                     <button class="btn-whatsapp" onclick="compartirProducto(
