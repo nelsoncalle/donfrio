@@ -39,7 +39,7 @@
         
         <div class="icon-container">
 
-            <div class="icon" onclick="buscarPorCategoria('pagina web')">
+            <div class="icon" onclick="buscarPorCategoria('desarrollo web')">
                 <img src="images/iconoBusqueda/sitio-web.png" alt="sitio web" class="search-icon">
                 <p>Sitio web</p>
             </div>
@@ -48,7 +48,7 @@
                 <p>app movil</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('soporte')">
-                <img id="soporte" src="images/iconoBusqueda/soporte.png" alt="soporte" class="search-icon">
+                <img src="images/iconoBusqueda/soporte.png" alt="soporte" class="search-icon">
                 <p>soporte</p>
             </div>
             <!-- <div class="icon" onclick="buscarPorCategoria('turbina')">  
