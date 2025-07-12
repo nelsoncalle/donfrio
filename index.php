@@ -40,15 +40,15 @@
         <div class="icon-container">
 
             <div class="icon" onclick="buscarPorCategoria('pagina web')">
-                <img src="images/iconoBusqueda/sitio-web.png" alt="pagina web" class="search-icon">
-                <p>desarrollo web</p>
+                <img src="images/iconoBusqueda/sitio-web.png" alt="sitio web" class="search-icon">
+                <p>Sitio web</p>
             </div>
-            <div class="icon" onclick="buscarPorCategoria('motor')">     
-                <img src="images/iconoBusqueda/app-movil.png" alt="motor" class="search-icon">
-                <p>desarrollo movil</p>
+            <div class="icon" onclick="buscarPorCategoria('app-movil')">     
+                <img src="images/iconoBusqueda/app-movil.png" alt="app movil" class="search-icon">
+                <p>app movil</p>
             </div>
-            <div class="icon" onclick="buscarPorCategoria('helice')">
-                <img src="images/iconoBusqueda/soporte.png" alt="helice" class="search-icon">
+            <div class="icon" onclick="buscarPorCategoria('soporte')">
+                <img src="images/iconoBusqueda/soporte.png" alt="soporte" class="search-icon">
                 <p>soporte</p>
             </div>
             <!-- <div class="icon" onclick="buscarPorCategoria('turbina')">  
