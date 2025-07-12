@@ -66,7 +66,7 @@ if(isset($_GET['busqueda'])) {
                         <td><?= htmlspecialchars($servicios['nombre']) ?></td>
                         <td><?= htmlspecialchars($servicios['tipo']) ?></td>
                         <td><?= htmlspecialchars($servicios['descripcion']) ?></td>
-                        <td>$<?= number_format($servicios['drecio'],2) ?></td>
+                        <td>$<?= number_format($servicios['precio'],2) ?></td>
                         <td><?= htmlspecialchars($servicios['duracion']) ?></td>
                         <td>
                             <?php if (!empty($servicios['imagen'])): ?>
