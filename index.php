@@ -48,7 +48,7 @@
                 <p>app movil</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('soporte')">
-                <img src="images/iconoBusqueda/soporte.png" alt="soporte" class="search-icon">
+                <img id="soporte" src="images/iconoBusqueda/soporte.png" alt="soporte" class="search-icon">
                 <p>soporte</p>
             </div>
             <!-- <div class="icon" onclick="buscarPorCategoria('turbina')">  
