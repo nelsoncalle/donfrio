@@ -52,6 +52,14 @@ body {
     display: none;
 }
 
+
+
+img.search-icon {
+    width: 30px !important;  
+    height: 30px !important;
+    object-fit: cover !important;
+}
+
 .icon-container {
     display: flex; /* Activar flexbox */
     align-items: center; /* Centrar verticalmente */

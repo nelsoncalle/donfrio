@@ -48,7 +48,7 @@
                 <p>desarrollo movil</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('helice')">
-                <img src="images/iconoBusqueda/helice.png" alt="helice" class="search-icon">
+                <img src="images/iconoBusqueda/soporte.png" alt="helice" class="search-icon">
                 <p>soporte</p>
             </div>
             <!-- <div class="icon" onclick="buscarPorCategoria('turbina')">  
