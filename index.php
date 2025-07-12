@@ -40,11 +40,11 @@
         <div class="icon-container">
 
             <div class="icon" onclick="buscarPorCategoria('pagina web')">
-                <img src="images/iconoBusqueda/compresor.png" alt="pagina web" class="search-icon">
+                <img src="images/iconoBusqueda/sitio-web.png" alt="pagina web" class="search-icon">
                 <p>desarrollo web</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('motor')">     
-                <img src="images/iconoBusqueda/motor-electrico.png" alt="motor" class="search-icon">
+                <img src="images/iconoBusqueda/app-movil.png" alt="motor" class="search-icon">
                 <p>desarrollo movil</p>
             </div>
             <div class="icon" onclick="buscarPorCategoria('helice')">
