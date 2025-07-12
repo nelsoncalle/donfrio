@@ -43,7 +43,7 @@
                 <img src="images/iconoBusqueda/sitio-web.png" alt="sitio web" class="search-icon">
                 <p>Sitio web</p>
             </div>
-            <div class="icon" onclick="buscarPorCategoria('app-movil')">     
+            <div class="icon" onclick="buscarPorCategoria('desarrollo movil')">     
                 <img src="images/iconoBusqueda/app-movil.png" alt="app movil" class="search-icon">
                 <p>app movil</p>
             </div>
